@@ -49,9 +49,10 @@ namespace OTP_Module_dotnet.Tests
             service.GenerateOtpEmail("valid@dso.org.sg");
 
             var otpField = typeof(EmailOtpService).GetField("_currentOTP", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            string correctOtp = (string)otpField.GetValue(service);
+            string? correctOtp = otpField?.GetValue(service) as string;
+            Assert.NotNull(correctOtp);
 
-            var input = new MockIOStream(new[] { correctOtp });
+            var input = new MockIOStream(new[] { correctOtp! });
             var result = service.CheckOtp(input);
 
             Assert.Equal(StatusCodes.STATUS_OTP_OK, result);
