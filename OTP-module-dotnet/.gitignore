@@ -1,0 +1,53 @@
+# .NET build files
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+# VS Code settings
+.vscode/
+.vscode-test/
+
+# Build results
+*.dll
+*.exe
+*.app
+*.pdb
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet CLI tools
+dotnet-tools.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment-specific files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rider or JetBrains (optional)
+.idea/
+*.sln.iml
+
+# Test coverage results
+coverage/
+TestResults/
+
+# Publish output
+publish/
