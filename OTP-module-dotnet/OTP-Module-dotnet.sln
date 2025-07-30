@@ -1,0 +1,21 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+
+Project("{9D6A85D6-92D6-4234-AF3D-1A9BBEEFA074}") = "OTP-Module-dotnet", "OTP-Module-dotnet.csproj", "{9D6A85D6-92D6-4234-AF3D-1A9BBEEFA074}"
+EndProject
+
+Project("{D6A92862-45B6-4D2C-8FF2-2A503D7A9021}") = "OTP-Module-dotnet.Tests", "..\\OTP-Module-dotnet.Tests\\OTP-Module-dotnet.Tests.csproj", "{D6A92862-45B6-4D2C-8FF2-2A503D7A9021}"
+EndProject
+
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal
