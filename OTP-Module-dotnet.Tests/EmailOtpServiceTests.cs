@@ -76,7 +76,7 @@ namespace OTP_Module_dotnet.Tests
             var service = CreateService(out _);
             service.GenerateOtpEmail("valid@dso.org.sg");
 
-            // Simulate no input at all
+            // Simulate no input 
             var input = new MockIOStream(new List<string>());
 
             var result = service.CheckOtp(input);
@@ -85,7 +85,6 @@ namespace OTP_Module_dotnet.Tests
         }
     }
 
-    // 🔧 Mock implementation of IOStream interface
     public class MockIOStream : IOStream
     {
         private readonly Queue<string> _inputs;
@@ -97,7 +96,7 @@ namespace OTP_Module_dotnet.Tests
 
         public string ReadOTP()
         {
-            // Simulate delayed input if needed
+            // Simulate delayed input 
             if (_inputs.Count == 0)
             {
                 Task.Delay(TimeSpan.FromMinutes(2)).Wait(); // simulate timeout
